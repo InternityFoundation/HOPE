@@ -1,0 +1,161 @@
+ <!DOCTYPE html>
+<html lang=="en">
+<html>
+    <head>
+        <style>
+      body{
+        background-image: url(https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eda6f34a3343980b50f2ba298103093f&auto=format&fit=crop&w=695&q=80);
+
+        background-repeat: no-repeat;
+        background-size: cover;	
+        background-position: center;
+        font-family: 'Lato', sans-serif; 
+        width: 100%;
+        height: 100%;
+      }
+      #event_image{
+          width: 20px;
+          height: 20px;
+      }
+    
+    </style>
+          <script language="Javascript">
+        function validate()
+{ 
+   if( document.register1.textnames.value == "" )
+   {
+     alert( "Please provide your Name!" );
+     document.register1.textnames.focus() ;
+     return false;
+   }
+   if ( ( register1.gender[0].checked == false ) && ( register1.gender[1].checked == false ) )
+   {
+   alert ( "Please choose your Gender: Male or Female" );
+   return false;
+   }   
+    var email = document.register1.emailid.value;
+  atpos = email.indexOf("@");
+  dotpos = email.lastIndexOf(".");
+ if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) 
+ {
+     alert("Please enter correct email ID")
+     document.register1.emailid.focus() ;
+     return false;
+ }
+  if( document.register1.dob.value == "" )
+   {
+     alert( "Please provide your DOB!" );
+     document.register1.dob.focus() ;
+     return false;
+   }
+  
+     if( document.register1.paddress.value == "" )
+   {
+     alert( "Please provide your Work Address!" );
+     document.register1.paddress.focus() ;
+     return false;
+   }
+   if( document.register1.City.value == "-1" )
+   {
+     alert( "Please provide your City!" );
+     document.register1.City.focus() ;
+     return false;
+   }   
+   if( document.register1.State.value == "-1" )
+   {
+     alert( "Please provide your Select State!" );
+     
+     return false;
+   }
+  if( document.register1.mobileno.value == "" ||
+           isNaN( document.register1.mobileno.value) ||
+           document.register1.mobileno.value.length != 10 )
+   {
+     alert( "Please provide a Mobile No in the format 123." );
+     document.register1.mobileno.focus() ;
+     return false;
+   }
+   return( true );
+}
+}
+if( document.register1.licenseno.value == "" ||
+           isNaN( document.register1.licenseno.value) ||
+           document.register1.licenseno.value.length != 10 )
+   {
+     alert( "Please provide a License No in the format 123." );
+     document.register1.licenseno.focus() ;
+     return false;
+   }
+   return( true );
+}
+}
+        </script>
+    </head>
+        <body>
+            <center><b>CREATE YOUR ACCOUNT</b></center>
+<form action="#" name="register1" onsubmit="return(validate());">
+
+<table cellpadding="2" width="40%" align="center"
+cellspacing="12">
+<tr>
+<td>Name</td>
+<td><input type=text name=textnames id="textname" size="30"></td>
+</tr>
+<tr>
+<td>Gender</td>
+<td><input type="radio" name="gender" value="male" size="10">Male
+<input type="radio" name="gender" value="Female" size="10">Female</td>
+</tr>
+<tr>
+    <tr>
+<td>Preferred EmailId</td>
+<td><input type="text" name="emailid" id="emailid" size="30"></td>
+</tr>
+
+<tr>
+<td>DOB</td>
+<td><input type="text" name="dob" id="dob" size="30"></td>
+</tr>
+<tr>
+    <td>Work Address/Hospital</td>
+<td><input type="text" name="paddress" id="paddress" size="30"></td>
+</tr>
+<tr>
+<td>City</td>
+<td><select name="City">
+<option value="-1" selected>select..</option>
+<option value="New Delhi">NEW DELHI</option>
+<option value="Mumbai">MUMBAI</option>
+<option value="Goa">GOA</option>
+<option value="Patna">PATNA</option>
+</select></td>
+</tr>
+<tr>
+<td>State</td>
+<td><select Name="State">
+<option value="-1" selected>select..</option>
+<option value="New Delhi">NEW DELHI</option>
+<option value="Mumbai">MUMBAI</option>
+<option value="Goa">GOA</option>
+<option value="Bihar">BIHAR</option>
+</select></td>
+</tr>
+<tr>
+<td>Work Phone</td>
+<td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+</tr>
+<tr>
+<td>License No.</td>
+<td><input type="text" name="licenseno" id="licenseno" size="30"></td>
+</tr>
+<tr>
+<td><input type="reset"></td>
+<td colspan="2"><input type="submit" value="Submit Form" /></td>
+</tr>
+</table>
+</form>
+
+    </body>
+    </html>
+             
+  
