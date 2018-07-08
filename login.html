@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang=="en">
+<html>
+    <head>
+        <style>
+      body{
+          background-color:"C4FCA9";
+          background-image:"hospital.jpg";
+        background-repeat: no-repeat;
+        background-size: cover;	
+        background-position: center;
+        font-family: 'Lato', sans-serif; 
+        width: 100%;
+        height: 100%;
+      }
+      #event_image{
+          width: 20px;
+          height: 20px;
+      }
+        
+      }
+    
+    </style>
+          <script language="Javascript">
+        function validate()
+{ 
+  var email = document.register1.emailid.value;
+  atpos = email.indexOf("@");
+  dotpos = email.lastIndexOf(".");
+ if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) 
+ {
+     alert("Please enter correct email ID")
+     document.register1.emailid.focus() ;
+     return false;
+ }
+    { 
+   if( document.register1.textnames.value == "" )
+   {
+     alert( "Please provide your Password!" );
+     document.register1.textnames.focus() ;
+     return false;
+   }
+        </script>
+    </head>
+    <body bgcolor="C4FCA9">
+            <center><b>ONLINE MEMBER DoctorsHelp!</b></center>
+            <center><b>LOGIN</b></center>
+<form action="#" name="register1" onsubmit="return(validate());">
+
+<table cellpadding="2" width="40%" align="center"
+cellspacing="12">
+<tr>
+<td>Email</td>
+<td><input type=text name=textnames id="textname" size="30"></td>
+</tr>
+    <tr>
+<td>Password</td>
+<td><input type=text name=textnames id="textname" size="30"></td>
+</tr>
+<tr>
+    <td colspan="1"><input type="submit" value="LOGIN" /></td>
+    <td><span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+        </td> 
+    </tr>
+    </table>
+        </form>
+    </body>
+    </html>
